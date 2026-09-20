@@ -18,8 +18,8 @@ contactForm.addEventListener("submit", async (event) => {
         return;
     }
 
-    const endpoint = window.CONTACT_FORM_ENDPOINT;
-    if (!endpoint || endpoint.includes("your-email")) {
+    const endpoint = contactForm.dataset.endpoint;
+    if (!endpoint) {
         formStatus.textContent = "The contact service is not configured yet.";
         formStatus.className = "form-status error";
         return;
