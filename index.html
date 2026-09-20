@@ -11,7 +11,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
-    <link rel="icon" href="favicon.png" type="image/png">
+    <link rel="icon" href="Favicon.png" type="image/png">
 </head>
 
 <body>
@@ -174,26 +174,28 @@
                 <h1> Get In Touch</h1>
             </div>
             <div class="contact-details">
-                <div class="box1">
+                <form class="box1" id="contact-form" novalidate>
                     <div class="input1">
-                        <input type="text" placeholder="Your Name">
-                        <input type="text" placeholder="Your E-Mail">
+                        <input type="text" id="name" name="name" placeholder="Your Name" autocomplete="name" required maxlength="100">
+                        <input type="email" id="email" name="email" placeholder="Your E-Mail" autocomplete="email" required maxlength="254">
                     </div>
                     <div class="input2">
-                        <input type="text" placeholder="Subject">
+                        <input type="tel" id="phone" name="phone" placeholder="Phone Number (optional)" autocomplete="tel" maxlength="30">
                     </div>
                     <div class="input2">
-                        <input type="text" placeholder="Subject">
+                        <input type="text" id="subject" name="subject" placeholder="Subject" required maxlength="150">
                     </div>
                     <div class="input3">
-                        <textarea name="" id="" placeholder="Your Message"></textarea>
+                        <textarea id="message" name="message" placeholder="Your Message" required maxlength="5000"></textarea>
                     </div>
+                    <input class="website-field" type="text" name="website" tabindex="-1" autocomplete="off" aria-hidden="true">
                     <div class="send">
-                        <button>
+                        <button type="submit" id="send-message-button">
                             Send Message
                         </button>
                     </div>
-                </div>
+                    <p id="form-status" class="form-status" role="status" aria-live="polite"></p>
+                </form>
 
                 <div class="box2">
                     <table>
@@ -235,6 +237,8 @@
 
 
     </footer>
+    <!-- Replace the value in config.js after deploying the backend. -->
+    <script src="config.js"></script>
     <script src="script.js"></script>
 </body>
 

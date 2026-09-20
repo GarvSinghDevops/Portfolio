@@ -327,7 +327,7 @@ i:hover {
 }
 
 .box1{
-    height: 400px;
+    min-height: 400px;
     width: 500px;
     background-color: #0B111B;
     margin: 40px;
@@ -403,6 +403,25 @@ i:hover {
     margin-bottom: 10px;
     margin-top: 10px;
     border-radius: 15px;
+}
+
+.website-field {
+    position: absolute;
+    left: -9999px;
+}
+
+.form-status {
+    min-height: 24px;
+    margin: 0 20px 15px;
+    font-size: 14px;
+}
+
+.form-status.success { color: #86efac; }
+.form-status.error { color: #fca5a5; }
+
+.send button:disabled {
+    cursor: wait;
+    opacity: 0.7;
 }
 
 .box2 img{
@@ -587,6 +606,21 @@ html{
         /* text-align: center; */
         margin-right: 0px;
         margin-bottom: 10px;
+     }
+
+     .box1, .box2 {
+        width: min(90vw, 500px);
+        margin: 20px 0;
+     }
+
+     .input1 {
+        flex-direction: column;
+        gap: 0;
+     }
+
+     .input1 input, .input2 input, .input3 textarea {
+        box-sizing: border-box;
+        width: calc(100% - 20px);
      }
 
 
