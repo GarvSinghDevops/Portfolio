@@ -372,19 +372,7 @@ i:hover {
     border-radius: 15px;
     margin: auto;
     width: 450px;       /* Adjust as needed */
-    height: 35px;
-    padding: 10px;
-    border: 2px solid #141A23;
-    background: transparent;
-    color: white;
-    outline: none;
-    font-size: 20px;
-}
-.input3 textarea{
-    border-radius: 15px;
-    margin: 10px;
-    width: 450px;       /* Adjust as needed */
-    height: 150px;
+    height: 25px;
     padding: 10px;
     border: 2px solid #141A23;
     background: transparent;
@@ -393,6 +381,24 @@ i:hover {
     font-size: 20px;
 }
 
+.input2{
+    margin: 10px;
+}
+.input3 textarea{
+    border-radius: 15px;
+    margin: 10px;
+    width: 450px;       /* Adjust as needed */
+    height: 90px;
+    padding: 10px;
+    border: 2px solid #141A23;
+    background: transparent;
+    color: white;
+    outline: none;
+    font-size: 20px;
+}
+.input3 textarea::-webkit-scrollbar{
+    display: none;
+}
 .send button{
     margin-bottom: 10px;
     margin-top: 10px;
